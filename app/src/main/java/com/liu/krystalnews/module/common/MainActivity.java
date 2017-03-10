@@ -18,6 +18,7 @@ import android.view.View;
 import com.liu.krystalnews.R;
 import com.liu.krystalnews.base.BaseActivity;
 import com.liu.krystalnews.base.BasePresenter;
+import com.liu.krystalnews.module.gank.GankFragment;
 import com.liu.krystalnews.utils.BlurBitmapUtil;
 
 import butterknife.BindArray;
@@ -34,7 +35,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     private ActionBarDrawerToggle toggle;
 
     private Fragment[] fragments;
-    @BindArray(R.array.titles)
+    @BindArray(R.array.nav_menu_titles)
     String[] titles;
 
     private int currentTabIndex;
@@ -59,13 +60,14 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
     private void initToolbar() {
         setSupportActionBar(toolbar);
+
         toggle = new ActionBarDrawerToggle(
                 this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         navigationView.setNavigationItemSelectedListener(this);
     }
 
     private void initFragment() {
-        SimpleFragment gankSimpleFragment = SimpleFragment.getInstance(getResources().getString(R.string.gank_io));
+        GankFragment gankSimpleFragment = new GankFragment();
         SimpleFragment girlSimpleFragment = SimpleFragment.getInstance(getResources().getString(R.string.girls_image));
         fragments = new Fragment[]{gankSimpleFragment, girlSimpleFragment};
         clickItem(0);
@@ -116,7 +118,6 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
             fragmentTransaction.add(R.id.content, fragments[index]);
         }
         fragmentTransaction.show(fragments[index]).commit();
-
         currentTabIndex = index;
     }
 }

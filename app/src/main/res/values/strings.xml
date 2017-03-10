@@ -2,10 +2,20 @@
     <string name="app_name">KrystalNews</string>
     <string name="navigation_drawer_open">打开侧边栏</string>
     <string name="navigation_drawer_close">关闭侧边栏</string>
-    <string name="gank_io">技术干货</string>
+    <string name="gank_io">日报干货</string>
     <string name="girls_image">妹子美图</string>
-    <string-array name="titles">
+    <string-array name="nav_menu_titles">
         <item>@string/gank_io</item>
         <item>@string/girls_image</item>
+    </string-array>
+    <string name="daily">日报</string>
+    <string name="android">Android</string>
+    <string name="iOS">iOS</string>
+    <string name="front">前端</string>
+    <string-array name="gank_titles">
+        <item>@string/daily</item>
+        <item>@string/android</item>
+        <item>@string/iOS</item>
+        <item>@string/front</item>
     </string-array>
 </resources>
