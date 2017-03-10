@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">KrystalNews</string>
+    <string name="navigation_drawer_open">打开侧边栏</string>
+    <string name="navigation_drawer_close">关闭侧边栏</string>
+    <string name="gank_io">技术干货</string>
+    <string name="girls_image">妹子美图</string>
+    <string-array name="titles">
+        <item>@string/gank_io</item>
+        <item>@string/girls_image</item>
+    </string-array>
+</resources>
