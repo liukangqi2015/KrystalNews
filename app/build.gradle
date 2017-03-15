@@ -31,4 +31,12 @@ dependencies {
     compile 'com.jakewharton:butterknife:8.5.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
     compile 'de.hdodenhof:circleimageview:2.1.0'
+    //RxAndroid和Retrofit相关
+    compile 'com.squareup.retrofit2:retrofit:2.0.0'
+    compile 'io.reactivex:rxjava:1.0.1'
+    compile 'io.reactivex:rxandroid:1.0.1'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.0'
+    //支持下拉刷新，上拉加载的RecyclerView
+    compile 'com.github.Aspsine:IRecyclerView:0.0.5'
 }

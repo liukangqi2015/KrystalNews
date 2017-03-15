@@ -16,18 +16,21 @@ import butterknife.BindView;
  */
 
 public class SimpleFragment extends BaseFragment {
-    private String mText;
+    private static final String KEY="title";
     @BindView(R.id.tv)
     TextView tv;
 
     public static SimpleFragment getInstance(String mText){
         SimpleFragment simpleFragment=new SimpleFragment();
-        simpleFragment.mText=mText;
+        Bundle bundle=new Bundle();
+        bundle.putString(KEY,mText);
+        simpleFragment.setArguments(bundle);
         return simpleFragment;
     }
 
     @Override
     protected void initView(View rootView, Bundle savedInstanceState) {
+        String mText=getArguments().getString(KEY);
         tv.setText(mText);
     }
 
