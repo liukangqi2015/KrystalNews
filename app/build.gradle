@@ -37,6 +37,7 @@ dependencies {
     compile 'io.reactivex:rxandroid:1.0.1'
     compile 'com.squareup.retrofit2:converter-gson:2.0.0'
     compile 'com.squareup.retrofit2:adapter-rxjava:2.0.0'
-    //支持下拉刷新，上拉加载的RecyclerView
-    compile 'com.github.Aspsine:IRecyclerView:0.0.5'
+    //支持下拉刷新，上拉加载
+    compile 'com.chanven.lib:cptr:1.1.0'
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.8.6'
 }
